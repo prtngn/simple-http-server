@@ -5,7 +5,7 @@ LABEL maintainer="jdkelley.oss@gmail.com"
 EXPOSE 8000
 WORKDIR /serve
 
-RUN apk --no-cache -U add python3 bash && \
+RUN apk --no-cache -U add python3 bash postgresql16-client && \
     apk upgrade --no-cache -U -a  
 # Patch OpenSSL vulnerability^
 
